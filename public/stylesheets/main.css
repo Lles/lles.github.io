@@ -1,0 +1,131 @@
+body {
+  padding: 50px;
+  font: 13px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 1.5rem;
+
+  background-color: white;
+  overflow: hidden;
+}
+
+a {
+  color: #00B7FF;
+}
+
+pre {
+  background-color: #dddddd;
+  text-align: left;
+  width: 20%;
+  padding: 1rem 1rem 1rem 3rem;
+  border: .1rem solid black;
+}
+
+code {
+  background-color: #eeeeee;
+}
+
+.fadein {
+  opacity: 0;
+  top: 100%;
+
+  transition: opacity 1.5s, top 1s;
+}
+
+body.loaded .fadein {
+  opacity: 1;
+  top: 30%;
+}
+
+#mainTitle {
+  text-align: center;
+  color: #e8702a;
+}
+
+.mainContainer {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  align-content: center;
+}
+
+.partContainer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: left;
+  width: 30%;
+}
+
+.partContainer > ol {
+  visibility: hidden;
+  display: none;
+  opacity: 0;
+  margin-top: -1rem;
+  transition: visibility 3s, opacity 1s, display 1s linear;
+}
+
+.partContainer:hover > ol {
+  visibility: visible;
+  display: block;
+  opacity: 1;
+  -webkit-animation: slide-down .5s ease-out;
+  -moz-animation: slide-down .5s ease-out;
+}
+
+.partContainer > p {
+  padding-top: 30%;
+  padding-bottom: 30%;
+  transition: padding-top 1s, padding-bottom 1s, padding-left 1s, padding-right 1s, border-radius 1s linear;
+  color: #0c457d;
+  user-select: none;
+  padding-right: 10%;
+  padding-left: 10%;
+  border: 2px solid #6495ed;
+  border-radius: 10%;
+  text-align: center;
+  background-color: #6495ed;
+}
+
+.partContainer:hover > p {
+  color: #0c457d;
+  border: 2px solid #e8702a;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  padding-left: 3%;
+  padding-right: 3%;
+  border-radius: 0%;
+}
+
+.chaptersContainer {
+  text-align: left;
+  list-style: none;
+  column-count: 2;
+  text-align: center;
+}
+
+.chaptersContainer > li {
+  padding: 1rem;
+}
+
+.chaptersContainer > li > a:hover {
+  color: #e8702a;
+}
+
+.chaptersContainer > li > a {
+  text-decoration: none;
+  color: #6495ed;
+}
+
+@-webkit-keyframes slide-down {
+  0% { opacity: 0; -webkit-transform: translateY(-100%); }   
+100% { opacity: 1; -webkit-transform: translateY(0); }
+}
+@-moz-keyframes slide-down {
+  0% { opacity: 0; -moz-transform: translateY(-100%); }   
+100% { opacity: 1; -moz-transform: translateY(0); }
+}

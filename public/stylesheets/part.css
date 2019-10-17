@@ -1,0 +1,110 @@
+body {
+    padding: 50px;
+    font: 13px "Lucida Grande", Helvetica, Arial, sans-serif;
+    font-size: 1.2rem;
+  
+    background-color: white;
+  }
+  
+a {
+    color: #00B7FF;
+}
+
+h2 {
+    color: #e8702a;
+}
+
+h3 {
+    color: #e8702a;
+}
+
+pre {
+    background-color: beige;
+    width: 30%;
+    text-align: left;
+    padding: 1%;
+    border: 2px solid #e8702a;
+}
+
+code {
+    padding-left: 2%;
+}
+
+.flip {
+    transform: scale(-1, 1);
+}
+
+.codeFormat {
+    border-left: 2px solid #e8702a;
+    padding: 1%;
+    white-space: pre;
+    font: 1.3rem "Courier New", sans-serif;
+}
+
+#navigator {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 10%;
+}
+
+#navigator > ul {
+    padding-top: 10%;
+    list-style: none;
+    float: right;
+    text-align: right;
+}
+
+#navigator > ul > li {
+    padding-top: .8rem;
+}
+
+#navigator > ul > li > a {
+    color: black;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+#navigator > ul > li > a:hover {
+    color: #e8702a;
+}
+
+#rightStuff {
+    position: absolute;
+    left: 12%;
+    width: 66%;
+}
+
+.terminalContainer {
+    position: fixed;
+    right: 0;
+    top: 0%;
+    width: 25%;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.terminalContainer > button {
+    color: #e8702a;
+    padding: 5%;
+    margin-bottom: 10%;
+    font-size: 1rem;
+}
+
+.terminal {
+    width: 100%;
+    height: 40rem;
+}
+
+.terminalContainer > p {
+    color: #e8702a;
+    margin-top: 10%;
+    text-align: center;
+    font-size: 2rem;
+    padding-right: 2%;
+}
